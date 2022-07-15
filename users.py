@@ -14,8 +14,8 @@ class User:
         query = "SELECT * FROM users;"
         results = connectToMySQL('Users_Crud_Modularized').query_db(query)
         users = []
-        for u in results:
-            users.append( cls(u) )
+        for user in results:
+            users.append( cls(user) )
         return users
 
     @classmethod
